@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Arduino Controller</string>
+    <string name="refresh">Refresh</string>
+    <string name="on">TURN ON</string>
+    <string name="off">TURN OFF</string>
+    <string name="disconnect">DISCONNECT</string>
+</resources>
