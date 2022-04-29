@@ -1,16 +1,14 @@
 package com.example.arduinocontroller
 
-import android.bluetooth.BluetoothDevice
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.OnReceiveContentListener
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.arduinocontroller.models.BluetoothDeviceModel
 
 class ItemAdapter(
-    private val list: ArrayList<BluetoothDevice>,
+    private val list: ArrayList<BluetoothDeviceModel>,
     private val listener: BluetoothDeviceClicked
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
 
@@ -29,8 +27,8 @@ class ItemAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val device = list[position]
-        val address: String = device.address
-        holder.textView.text = address
+        val name: String = device.name
+        holder.textView.text = name
     }
 
     override fun getItemCount() = list.size

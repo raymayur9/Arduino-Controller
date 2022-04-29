@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import com.example.arduinocontroller.databinding.ActivityMainBinding
+import com.example.arduinocontroller.models.BluetoothDeviceModel
 
 class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
 
@@ -65,13 +66,13 @@ class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
             }
         }
         mPairedDevices = mBluetoothAdapter!!.bondedDevices
-        val list: ArrayList<BluetoothDevice> = ArrayList()
+        val list: ArrayList<BluetoothDeviceModel> = ArrayList()
 
         if (mPairedDevices.isNotEmpty())
         {
             for (device in mPairedDevices)
             {
-                list.add(device)
+                list.add(BluetoothDeviceModel(device.name, device.address))
                 Log.i("device", device.toString())
             }
         }
