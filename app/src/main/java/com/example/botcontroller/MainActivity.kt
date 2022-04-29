@@ -1,4 +1,4 @@
-package com.example.arduinocontroller
+package com.example.botcontroller
 
 import android.Manifest
 import android.app.Activity
@@ -11,9 +11,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
-import com.example.arduinocontroller.databinding.ActivityMainBinding
-import com.example.arduinocontroller.models.BluetoothDeviceModel
+import com.example.botcontroller.databinding.ActivityMainBinding
+import com.example.botcontroller.models.BluetoothDeviceModel
 
 class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

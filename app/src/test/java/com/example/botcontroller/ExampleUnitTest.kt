@@ -1,4 +1,4 @@
-package com.example.arduinocontroller
+package com.example.botcontroller
 
 import org.junit.Test
 

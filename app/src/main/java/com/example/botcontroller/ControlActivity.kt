@@ -1,4 +1,4 @@
-package com.example.arduinocontroller
+package com.example.botcontroller
 
 import android.Manifest
 import android.app.ProgressDialog
@@ -14,7 +14,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.app.ActivityCompat
-import com.example.arduinocontroller.databinding.ActivityControlBinding
+import com.example.botcontroller.databinding.ActivityControlBinding
 import java.io.IOException
 import java.util.*
 

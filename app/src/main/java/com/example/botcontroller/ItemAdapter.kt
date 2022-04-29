@@ -1,11 +1,11 @@
-package com.example.arduinocontroller
+package com.example.botcontroller
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.arduinocontroller.models.BluetoothDeviceModel
+import com.example.botcontroller.models.BluetoothDeviceModel
 
 class ItemAdapter(
     private val list: ArrayList<BluetoothDeviceModel>,

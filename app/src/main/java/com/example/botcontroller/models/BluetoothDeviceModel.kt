@@ -1,4 +1,4 @@
-package com.example.arduinocontroller.models
+package com.example.botcontroller.models
 
 data class BluetoothDeviceModel (
     val name: String,
