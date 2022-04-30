@@ -66,6 +66,8 @@ class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
 //            startActivityForResult(enableBluetoothIntent, REQUEST_ENABLE_BLUETOOTH)
                 startForResult.launch(enableBluetoothIntent)
             }
+            requestPermissionLauncher.launch(
+                Manifest.permission.BLUETOOTH_CONNECT)
         }
         mPairedDevices = mBluetoothAdapter!!.bondedDevices
         val list: ArrayList<BluetoothDeviceModel> = ArrayList()
@@ -87,6 +89,24 @@ class MainActivity : AppCompatActivity(), BluetoothDeviceClicked {
         binding.deviceList.adapter = adapter
 
     }
+
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { isGranted: Boolean ->
+            if (isGranted) {
+                // Permission is granted. Continue the action or workflow in your
+                // app.
+                Toast.makeText(this, "Nearby Device permission has been granted!", Toast.LENGTH_SHORT).show()
+            } else {
+                // Explain to the user that the feature is unavailable because the
+                // features requires a permission that the user has denied. At the
+                // same time, respect the user's decision. Don't link to system
+                // settings in an effort to convince the user to change their
+                // decision.
+                Toast.makeText(this, "Nearby Device permission has not been granted!", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == Activity.RESULT_OK)
