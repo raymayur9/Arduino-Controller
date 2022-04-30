@@ -95,11 +95,11 @@ class ControlActivity : AppCompatActivity() {
         binding.northButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("n1")
+                    sendCommand("a")
                     binding.northButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("n0")
+                    sendCommand("b")
                     binding.northButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -109,11 +109,11 @@ class ControlActivity : AppCompatActivity() {
         binding.southButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("s1")
+                    sendCommand("c")
                     binding.southButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("s0")
+                    sendCommand("d")
                     binding.southButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -123,11 +123,11 @@ class ControlActivity : AppCompatActivity() {
         binding.westButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("w1")
+                    sendCommand("e")
                     binding.westButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("w0")
+                    sendCommand("f")
                     binding.westButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -137,11 +137,11 @@ class ControlActivity : AppCompatActivity() {
         binding.eastButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("e1")
+                    sendCommand("g")
                     binding.eastButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("e0")
+                    sendCommand("h")
                     binding.eastButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -151,11 +151,11 @@ class ControlActivity : AppCompatActivity() {
         binding.northWestButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("nw1")
+                    sendCommand("i")
                     binding.northWestButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("nw0")
+                    sendCommand("j")
                     binding.northWestButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -165,11 +165,11 @@ class ControlActivity : AppCompatActivity() {
         binding.northEastButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("ne1")
+                    sendCommand("k")
                     binding.northEastButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("ne0")
+                    sendCommand("l")
                     binding.northEastButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -179,11 +179,11 @@ class ControlActivity : AppCompatActivity() {
         binding.southWestButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("sw1")
+                    sendCommand("m")
                     binding.southWestButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("sw0")
+                    sendCommand("n")
                     binding.southWestButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -193,11 +193,11 @@ class ControlActivity : AppCompatActivity() {
         binding.southEastButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("se1")
+                    sendCommand("o")
                     binding.southEastButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("se0")
+                    sendCommand("p")
                     binding.southEastButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -208,11 +208,11 @@ class ControlActivity : AppCompatActivity() {
         binding.antiClockwiseButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("c1")
+                    sendCommand("q")
                     binding.antiClockwiseButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("c0")
+                    sendCommand("r")
                     binding.antiClockwiseButton.setBackgroundResource(R.color.light_bg)
                 }
             }
@@ -222,16 +222,21 @@ class ControlActivity : AppCompatActivity() {
         binding.clockwiseButton.setOnTouchListener (View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
-                    sendCommand("c1")
+                    sendCommand("s")
                     binding.clockwiseButton.setBackgroundResource(R.color.dark_bg)
                 }
                 MotionEvent.ACTION_UP -> {
-                    sendCommand("c0")
+                    sendCommand("t")
                     binding.clockwiseButton.setBackgroundResource(R.color.light_bg)
                 }
             }
             return@OnTouchListener true
         })
+
+        binding.stopButton.setOnClickListener {
+            sendCommand("u")
+        }
+
         binding.disconnect.setOnClickListener{ disconnect() }
     }
 

@@ -10,146 +10,160 @@
         android:id="@+id/northButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="100dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_north_dark"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/westButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_west_dark"
-        app:layout_constraintTop_toBottomOf="@id/northButton"
         app:layout_constraintEnd_toStartOf="@id/northButton"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"/>
+        app:layout_constraintTop_toBottomOf="@id/northButton" />
 
     <ImageButton
         android:id="@+id/eastButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_east_dark"
-        app:layout_constraintTop_toBottomOf="@id/northButton"
         app:layout_constraintStart_toEndOf="@id/northButton"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"/>
+        app:layout_constraintTop_toBottomOf="@id/northButton" />
 
     <ImageButton
         android:id="@+id/southButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="160dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_south_dark"
-        app:layout_constraintTop_toBottomOf="@id/northButton"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="160dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/northButton" />
 
     <ImageButton
         android:id="@+id/northWestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginEnd="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_north_west_dark"
-        app:layout_constraintTop_toTopOf="@id/northButton"
         app:layout_constraintEnd_toStartOf="@id/northButton"
-        android:layout_marginEnd="30dp"/>
+        app:layout_constraintTop_toTopOf="@id/northButton" />
 
     <ImageButton
         android:id="@+id/northEastButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginStart="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_north_east_dark"
-        app:layout_constraintTop_toTopOf="@id/northButton"
         app:layout_constraintStart_toEndOf="@id/northButton"
-        android:layout_marginStart="30dp"/>
+        app:layout_constraintTop_toTopOf="@id/northButton" />
 
     <ImageButton
         android:id="@+id/southWestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginEnd="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_south_west_dark"
-        app:layout_constraintTop_toTopOf="@id/southButton"
         app:layout_constraintEnd_toStartOf="@id/southButton"
-        android:layout_marginEnd="30dp"/>
+        app:layout_constraintTop_toTopOf="@id/southButton" />
 
     <ImageButton
         android:id="@+id/southEastButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginStart="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_south_east_dark"
-        app:layout_constraintTop_toTopOf="@id/southButton"
         app:layout_constraintStart_toEndOf="@id/southButton"
-        android:layout_marginStart="30dp"/>
+        app:layout_constraintTop_toTopOf="@id/southButton" />
 
     <ImageButton
         android:id="@+id/antiClockwiseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_anticlockwise_dark"
-        app:layout_constraintTop_toBottomOf="@id/southButton"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/clockwiseButton"
-        android:layout_marginTop="30dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/southButton" />
 
     <ImageButton
         android:id="@+id/clockwiseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="30dp"
         android:background="@color/light_bg"
+        android:importantForAccessibility="no"
         android:minWidth="100dp"
         android:minHeight="100dp"
         android:src="@drawable/ic_baseline_clockwise_dark"
-        app:layout_constraintTop_toBottomOf="@id/southButton"
-        app:layout_constraintStart_toEndOf="@id/antiClockwiseButton"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
+        app:layout_constraintStart_toEndOf="@id/antiClockwiseButton"
+        app:layout_constraintTop_toBottomOf="@id/southButton" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/light_bg"
+        android:importantForAccessibility="no"
+        android:minWidth="100dp"
+        android:minHeight="100dp"
+        android:src="@drawable/ic_baseline_stop_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/northButton" />
 
     <Button
         android:id="@+id/disconnect"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/disconnect"
         android:layout_margin="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/disconnect"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
